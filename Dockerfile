@@ -66,6 +66,8 @@ RUN mkdir /data && chown redis:redis /data
 
 VOLUME /data
 
+WORKDIR /data
+
 ADD resources/entrypoint.sh /usr/local/bin/
 
 ENTRYPOINT [ "/usr/local/bin/entrypoint.sh" ]
